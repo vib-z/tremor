@@ -8,7 +8,7 @@ A quieter window for running many coding agents. A thin sidebar lists every work
 
 - **Sidebar, 280px (240 to 480), chrome background.** A 40px head with search and collapse, a machine selector (All, This computer, each machine, Add machine), then a tree: workspace, tab, pane, with Core sub-agents under their parent. One row per agent: its mark, name and a status symbol. A 40px usage foot at the bottom: per machine, each tool's percent used and when it resets.
 - **Tab bar.** One tab per agent or shell with its mark and status, a + for a new tab, and icon-only toggles on the right: Chat / Terminal and Grid / Factory.
-- **Work area.** Panes as Herdr splits them, each with a slim header (name, folder, controls). In Factory mode the work area becomes a full-width map grouped by machine, then workspace, with one card per agent (mark, name, time in state, last report) and a shell count.
+- **Work area.** Panes as Herdr splits them, each with a slim header (name, folder, controls). In Factory mode the work area becomes a full-width map grouped by machine, then workspace, with one card per agent (mark, name, time in state, last report) and a shell count. A Map / Board toggle puts the Map first: leads first, and a click on a lead opens its team in place (Esc or a second click closes it).
 - **Look.** T3 / shadcn style tokens, Geist UI font at 13px, light and dark themes (pdk-t3-light, pdk-t3-dark), Lucide icons, grey by default with colour only for blocked, error and unseen done.
 
 ## How it behaves
@@ -26,8 +26,8 @@ A quieter window for running many coding agents. A thin sidebar lists every work
 
 ## Watch out
 
-- macOS only, built on Herdr app 0.1.14.
-- Install with `install.sh --live ~/.config/herdr-app` while Herdr is quit; it backs up what it replaces and the uninstaller restores it.
+- **Add it with the installer, not by copying folders.** From a clone of the repo, with Herdr quit, run `modpack/install.sh --live ~/.config/herdr-app`. Copying only `layouts/` and `mods/` leaves out each mod's `lib/` (built from `adapters/` and `shared/`), the helpers, themes and icons, and the layout will not run. The installer backs up what it replaces and `modpack/uninstall.sh --live ~/.config/herdr-app` restores it.
+- macOS only, built on Herdr app 0.1.15 and herdr-core 0.1.20.
 - Mods see live state only, so time in state is counted from when the app started.
 - The chat cannot approve a blocked agent.
 

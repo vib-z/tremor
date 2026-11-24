@@ -17,7 +17,7 @@ git clone https://github.com/vib-z/tremor && cd tremor
 modpack/install.sh --live ~/.config/herdr-app
 ```
 
-macOS, built on Herdr app 0.1.14. Quit Herdr before installing. Workspaces, tabs, Settings and Add machine stay stock, and the uninstaller puts everything back.
+macOS, built on Herdr app 0.1.15. Quit Herdr before installing. Workspaces, tabs, Settings and Add machine stay stock, and the uninstaller puts everything back.
 
 If this saves you the tab hunt, star the repo so other people can find it.
 
