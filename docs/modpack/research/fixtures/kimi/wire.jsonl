@@ -1,0 +1,7 @@
+{"type":"metadata","protocol_version":"1.5"}
+{"type":"turn.prompt","time":1794176880100,"promptId":"p_01"}
+{"type":"context.append_message","time":1794176880101,"message":{"role":"user","content":[{"type":"text","text":"List two files here, then say done."}]}}
+{"type":"context.append_message","time":1794176882400,"message":{"role":"assistant","content":[{"type":"think","think":""},{"type":"text","text":"Listing the folder."}],"toolCalls":[{"type":"function","id":"tool_01","name":"Shell","arguments":"{\"command\":\"ls\"}"}]}}
+{"type":"context.append_message","time":1794176882900,"message":{"role":"tool","content":[{"type":"text","text":"alpha.txt\nbeta.md\n"}],"toolCallId":"tool_01"}}
+{"type":"context.append_message","time":1794176884000,"message":{"role":"assistant","content":[{"type":"text","text":"alpha.txt and beta.md. Done."}],"toolCalls":[]}}
+{"type":"turn.ended","time":1794176884001,"turnId":1,"reason":"completed"}

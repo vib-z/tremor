@@ -1,0 +1,14 @@
+{
+  "name": "tremor",
+  "private": true,
+  "packageManager": "bun@1.3.14",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc -p packages/protocol"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.14",
+    "typescript": "7.0.2"
+  }
+}

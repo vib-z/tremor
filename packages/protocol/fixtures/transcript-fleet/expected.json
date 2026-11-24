@@ -1,0 +1,87 @@
+{
+  "description": "A lead's transcript: assistant text, a tool use and its result paired by toolUseId (at is the entry's own time when it has one), a user turn starting with an `<hc from>` tag (a message whose sender is only claimed), and hc's own note (an observation about the child). Repeated lines add nothing. The job's inbox.log: REPORT, TURN and QUESTION lines as observations about the agent they name and for the job's lead (resolved by stampede labels only), a repeated line dropped by its offset, then a truncation that starts a new file identity at offset 0; a line kind the slice does not know moves the cursor only.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "a7000000000000000000000000000007",
+        "conn": "e1",
+        "lastSeq": 4
+      }
+    },
+    "terminals": {
+      "a7000000000000000000000000000007/t1": {
+        "state": "live",
+        "status": {
+          "state": "idle"
+        },
+        "statusMs": 1794359999950,
+        "records": {},
+        "foreground": null,
+        "turn": 0,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "stampede.job": "job1",
+          "stampede.agent": "lead",
+          "stampede.role": "lead"
+        }
+      },
+      "a7000000000000000000000000000007/t2": {
+        "state": "live",
+        "status": null,
+        "statusMs": null,
+        "records": {},
+        "foreground": null,
+        "turn": 0,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "stampede.job": "job1",
+          "stampede.agent": "build-core",
+          "stampede.role": "worker"
+        }
+      }
+    },
+    "activity": [
+      "transcript tx:16777220:12345:1794359000000:1 1794360000090 assistant:::Starting the build.",
+      "transcript tx:16777220:12345:1794359000000:2 1794360000100 tool-use:Bash:toolu_1:ls packages",
+      "transcript tx:16777220:12345:1794359000000:3 1794360000110 tool-result::toolu_1:core protocol",
+      "message tx:16777220:12345:1794359000000:4 1794360000130 hc-tag",
+      "observation tx:16777220:12345:1794359000000:5 1794360000140 hc-note:a7000000000000000000000000000007/t1>a7000000000000000000000000000007/t2:t2 build-core exited (exit 0). Read: hc read t2",
+      "observation fleet:job1:16777220:999:1794350000000:0 1794360000200 fleet-report:a7000000000000000000000000000007/t1>:REPORT reports/core.md",
+      "observation fleet:job1:16777220:999:1794350000000:23 1794360000210 fleet-turn:a7000000000000000000000000000007/t1>a7000000000000000000000000000007/t2:TURN build-core Finished the engine",
+      "observation fleet:job1:16777220:999:1794350000000:59 1794360000220 fleet-question:a7000000000000000000000000000007/t1>a7000000000000000000000000000007/t2:QUESTION build-core: which key format?",
+      "observation fleet:job1:16777220:999:1794350000000#1:0 1794360000300 fleet-gone:a7000000000000000000000000000007/t1>a7000000000000000000000000000007/t2:GONE build-core prompt_input_exit"
+    ],
+    "messages": [
+      {
+        "key": "tx:16777220:12345:1794359000000:4",
+        "from": "claimed:a7000000000000000000000000000007/t2:t2 build-core",
+        "to": "terminal:a7000000000000000000000000000007/t1",
+        "via": "hc-tag",
+        "text": "done: wrote the engine"
+      }
+    ],
+    "approvals": {},
+    "actions": {},
+    "cursors": {
+      "transcript:a7000000000000000000000000000007/t1": {
+        "file": "16777220:12345:1794359000000",
+        "offset": 5
+      },
+      "fleet:job1": {
+        "file": "16777220:999:1794350000000#1",
+        "offset": 64
+      }
+    },
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": null
+  }
+}

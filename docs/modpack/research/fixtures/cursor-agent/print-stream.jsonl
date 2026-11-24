@@ -1,0 +1,6 @@
+{"type":"system","subtype":"init","apiKeySource":"login","cwd":"/private/tmp/chat-sample/cursor","session_id":"c6b62c6f-0000-4000-8000-000000000001","model":"model","permissionMode":"default"}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"List two files here, then say done."}]},"session_id":"c6b62c6f-0000-4000-8000-000000000001"}
+{"type":"tool_call","subtype":"started","call_id":"toolu_01","tool_call":{"function":{"name":"shell","arguments":"{\"command\":\"ls\"}"}},"session_id":"c6b62c6f-0000-4000-8000-000000000001"}
+{"type":"tool_call","subtype":"completed","call_id":"toolu_01","tool_call":{"function":{"name":"shell","arguments":"{\"command\":\"ls\"}"}},"session_id":"c6b62c6f-0000-4000-8000-000000000001"}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"alpha.txt and beta.md. Done."}]},"session_id":"c6b62c6f-0000-4000-8000-000000000001"}
+{"type":"result","subtype":"success","duration_ms":4000,"duration_api_ms":4000,"is_error":false,"result":"alpha.txt and beta.md. Done.","session_id":"c6b62c6f-0000-4000-8000-000000000001"}

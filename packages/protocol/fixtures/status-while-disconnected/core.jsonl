@@ -1,0 +1,12 @@
+{"t":1794330000000,"source":"local","conn":"e1","kind":"connecting","attempt":0}
+{"t":1794330000010,"source":"local","conn":"e1","kind":"hello","result":{"core":{"id":"d4000000000000000000000000000004","name":"fixture"},"generation":1,"version":"0.1.19","features":["framed","attach","events","status","shell","resize_notifications","automatic_input"]}}
+{"t":1794330000020,"source":"local","conn":"e1","kind":"subscribed","result":{"seq":3,"terminals":[{"address":"t1","name":null,"labels":{"tremor.test":"f4"},"parent":null,"state":"live","status":{"app":"codex","state":"working"},"status_ms":1794329999800,"reported":true,"turn":2,"title":"","cwd":"/tmp/w","argv":["sh"],"exit_code":null,"signal":null,"reason":null,"keep":false,"created_ms":1794329995000,"finished_ms":null,"cols":80,"rows":24,"pid":1}],"channel":1}}
+{"t":1794330000025,"source":"local","conn":"e1","kind":"doc","name":"herdr-app","version":1,"value":{}}
+{"t":1794330000500,"source":"local","conn":"e1","kind":"notification","msg":{"method":"event","params":{"seq":4,"type":"title","terminal":"t1","data":{"title":"Refactor"}}}}
+{"t":1794330001000,"source":"local","conn":"e1","kind":"closed","reason":"hc connect exited","attempt":1,"retryInMs":500}
+{"t":1794330001500,"source":"local","conn":"e2","kind":"connecting","attempt":1}
+{"t":1794330001510,"source":"local","conn":"e2","kind":"hello","result":{"core":{"id":"d4000000000000000000000000000004","name":"fixture"},"generation":1,"version":"0.1.19","features":["framed","attach","events","status","shell","resize_notifications","automatic_input"]}}
+{"t":1794330001520,"source":"local","conn":"e2","kind":"subscribed","result":{"seq":9,"terminals":[{"address":"t1","name":null,"labels":{"tremor.test":"f4"},"parent":null,"state":"live","status":{"app":"codex","state":"done"},"status_ms":1794330001200,"reported":true,"turn":3,"title":"Refactor","cwd":"/tmp/w","argv":["sh"],"exit_code":null,"signal":null,"reason":null,"keep":false,"created_ms":1794329995000,"finished_ms":null,"cols":80,"rows":24,"pid":1}],"channel":1}}
+{"t":1794330001525,"source":"local","conn":"e2","kind":"doc","name":"herdr-app","version":1,"value":{}}
+{"t":1794330001530,"source":"local","conn":"e1","kind":"notification","msg":{"method":"event","params":{"seq":5,"type":"status","terminal":"t1","data":{"status":{"app":"codex","state":"done"},"records":{},"reported":true}}}}
+{"t":1794330001600,"source":"local","conn":"e2","kind":"notification","msg":{"method":"event","params":{"seq":9,"type":"title","terminal":"t1","data":{"title":"already applied"}}}}

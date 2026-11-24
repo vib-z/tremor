@@ -1,0 +1,6 @@
+{
+  "layout:tremor": {
+    "cmd-k": "mod.open:pdk-search",
+    "cmd-p": "mod.open:pdk-search"
+  }
+}

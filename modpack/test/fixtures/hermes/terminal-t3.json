@@ -1,0 +1,44 @@
+{
+ "address": "t3",
+ "argv": [
+  "/bin/sh",
+  "-lic",
+  "\"$@\"; exec \"$0\" -li",
+  "/bin/sh",
+  "hermes",
+  "chat",
+  "--safe-mode",
+  "-t",
+  "terminal",
+  "--provider",
+  "anthropic",
+  "-m",
+  "claude-haiku-5-5",
+  "-q",
+  "List two files here, then say done."
+ ],
+ "cwd": "/Users/me/code/jobs/worktrees/core-client-1108-qa/modpack/.sandbox/qa/work/alpha",
+ "status": null,
+ "reported": false,
+ "foreground": {
+  "pid": 27388,
+  "argv": [
+   "/Users/me/.hermes/tools/python-3.14.9+20261021-darwin-arm64/bin/python3",
+   "-I",
+   "-c",
+   "import os, re, sys\nimport contextlib, hashlib, io, pathlib, shutil, subprocess\nos.environ.pop('PYTHONHOME', None)\nos.environ.pop('PYTHONPATH', None)\nsys.path.insert(0, '/Users/me/.hermes/hermes-agent')\ndef _hermes_closure_repair():\n    import contextlib, hashlib, io, shutil, subprocess\n    from pathlib import Path\n    root = Path('/Users/me/.hermes/hermes-agent')\n    git = root\u2026",
+   "chat",
+   "--safe-mode",
+   "-t",
+   "terminal",
+   "--provider",
+   "anthropic",
+   "-m",
+   "claude-haiku-5-5",
+   "-q",
+   "List two files here, then say done."
+  ],
+  "cwd": "/Users/me/code/jobs/worktrees/core-client-1108-qa/modpack/.sandbox/qa/work/alpha",
+  "name": "python3.14"
+ }
+}

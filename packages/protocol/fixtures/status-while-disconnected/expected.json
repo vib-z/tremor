@@ -1,0 +1,45 @@
+{
+  "description": "The status changed while disconnected (working, then done one turn later): the snapshot gives exactly one gap and the new facts, no invented status or turn activity. A late line from the retired connection and an event at the snapshot's own seq are dropped.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "d4000000000000000000000000000004",
+        "conn": "e2",
+        "lastSeq": 9
+      }
+    },
+    "terminals": {
+      "d4000000000000000000000000000004/t1": {
+        "state": "live",
+        "status": {
+          "app": "codex",
+          "state": "done"
+        },
+        "statusMs": 1794330001200,
+        "records": {},
+        "foreground": null,
+        "turn": 3,
+        "title": "Refactor",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f4"
+        }
+      }
+    },
+    "activity": [
+      "observation gap:d4000000000000000000000000000004:e2:9:t1:status 1794330001520 gap:d4000000000000000000000000000004/t1>:while disconnected: status now done"
+    ],
+    "messages": [],
+    "approvals": {},
+    "actions": {},
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": null
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "description": "Composer sends to an idle, a working and a done agent, and one whose guard Core refused: each is a proven message from the person, recorded when it was dispatched, with its outcome settled after. Each message carries the expectedStatus the composer saw, and the digest shows it.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "c0110000000000000000000000000011",
+        "conn": "e1",
+        "lastSeq": 3
+      }
+    },
+    "terminals": {
+      "c0110000000000000000000000000011/t1": {
+        "state": "live",
+        "status": {
+          "app": "claude-code",
+          "state": "done"
+        },
+        "statusMs": 1794399999990,
+        "records": {},
+        "foreground": null,
+        "turn": 2,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f11",
+          "herdr.seen": "1"
+        }
+      }
+    },
+    "activity": [
+      "message user:fx:a1 1794400000100 composer",
+      "action.settled user:fx:a1:settled 1794400000150 done",
+      "status core:c0110000000000000000000000000011:e1:1 1794400000200 working||",
+      "message user:fx:a2 1794400000300 composer",
+      "action.settled user:fx:a2:settled 1794400000400 done",
+      "status core:c0110000000000000000000000000011:e1:2 1794400000500 done||",
+      "turn core:c0110000000000000000000000000011:e1:3 1794400000501 2:done",
+      "message user:fx:a3 1794400000600 composer",
+      "action.settled user:fx:a3:settled 1794400000650 done",
+      "message user:fx:a4 1794400000700 composer",
+      "action.settled user:fx:a4:settled 1794400000750 refused"
+    ],
+    "messages": [
+      {
+        "key": "user:fx:a1",
+        "from": "person:fx",
+        "to": "terminal:c0110000000000000000000000000011/t1",
+        "via": "composer",
+        "text": "Run the tests",
+        "expectedStatus": "idle"
+      },
+      {
+        "key": "user:fx:a2",
+        "from": "person:fx",
+        "to": "terminal:c0110000000000000000000000000011/t1",
+        "via": "composer",
+        "text": "Also lint",
+        "expectedStatus": "working"
+      },
+      {
+        "key": "user:fx:a3",
+        "from": "person:fx",
+        "to": "terminal:c0110000000000000000000000000011/t1",
+        "via": "composer",
+        "text": "Thanks",
+        "expectedStatus": "done"
+      },
+      {
+        "key": "user:fx:a4",
+        "from": "person:fx",
+        "to": "terminal:c0110000000000000000000000000011/t1",
+        "via": "composer",
+        "text": "One more",
+        "expectedStatus": "idle"
+      }
+    ],
+    "approvals": {},
+    "actions": {
+      "a1": "done",
+      "a2": "done",
+      "a3": "done",
+      "a4": "refused"
+    },
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": null
+  }
+}

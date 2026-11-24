@@ -1,0 +1,15 @@
+{"t":1794400000000,"source":"local","conn":"e1","kind":"connecting","attempt":0}
+{"t":1794400000010,"source":"local","conn":"e1","kind":"hello","result":{"core":{"id":"c0110000000000000000000000000011","name":"fixture"},"generation":1,"version":"0.1.19","features":["framed","attach","events","status","shell","resize_notifications","automatic_input"]}}
+{"t":1794400000020,"source":"local","conn":"e1","kind":"subscribed","result":{"seq":0,"terminals":[{"address":"t1","name":null,"labels":{"tremor.test":"f11","herdr.seen":"1"},"parent":null,"state":"live","status":{"app":"claude-code","state":"idle"},"status_ms":1794399999990,"reported":true,"turn":1,"title":"","cwd":"/tmp/w","argv":["claude"],"exit_code":null,"signal":null,"reason":null,"keep":false,"created_ms":1794399999500,"finished_ms":null,"cols":80,"rows":24,"pid":1}],"channel":1}}
+{"t":1794400000025,"source":"local","conn":"e1","kind":"doc","name":"herdr-app","version":1,"value":{}}
+{"t":1794400000100,"kind":"user","phase":"dispatched","clientId":"fx","action":{"type":"send","terminal":"c0110000000000000000000000000011/t1","text":"Run the tests","expectedStatus":"idle","actionId":"a1"}}
+{"t":1794400000150,"kind":"user","phase":"settled","clientId":"fx","actionId":"a1","outcome":{"state":"done","detail":"sent if idle"}}
+{"t":1794400000200,"source":"local","conn":"e1","kind":"notification","msg":{"method":"event","params":{"seq":1,"type":"status","terminal":"t1","data":{"status":{"app":"claude-code","state":"working"},"records":{},"reported":true}}}}
+{"t":1794400000300,"kind":"user","phase":"dispatched","clientId":"fx","action":{"type":"send","terminal":"c0110000000000000000000000000011/t1","text":"Also lint","expectedStatus":"working","actionId":"a2"}}
+{"t":1794400000400,"kind":"user","phase":"settled","clientId":"fx","actionId":"a2","outcome":{"state":"done","detail":"sent if working"}}
+{"t":1794400000500,"source":"local","conn":"e1","kind":"notification","msg":{"method":"event","params":{"seq":2,"type":"status","terminal":"t1","data":{"status":{"app":"claude-code","state":"done"},"records":{},"reported":true}}}}
+{"t":1794400000501,"source":"local","conn":"e1","kind":"notification","msg":{"method":"event","params":{"seq":3,"type":"turn","terminal":"t1","data":{"turn":2,"state":"done"}}}}
+{"t":1794400000600,"kind":"user","phase":"dispatched","clientId":"fx","action":{"type":"send","terminal":"c0110000000000000000000000000011/t1","text":"Thanks","expectedStatus":"done","actionId":"a3"}}
+{"t":1794400000650,"kind":"user","phase":"settled","clientId":"fx","actionId":"a3","outcome":{"state":"done","detail":"sent without a guard"}}
+{"t":1794400000700,"kind":"user","phase":"dispatched","clientId":"fx","action":{"type":"send","terminal":"c0110000000000000000000000000011/t1","text":"One more","expectedStatus":"idle","actionId":"a4"}}
+{"t":1794400000750,"kind":"user","phase":"settled","clientId":"fx","actionId":"a4","outcome":{"state":"refused","detail":"status_mismatch: t1 is done, not idle"}}

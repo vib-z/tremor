@@ -1,0 +1,47 @@
+{
+  "description": "A kept terminal: its working program dies (status cleared, then a turn whose state is null, then `lost`, which clears the foreground and keeps it live), Core restarts it with a shell (`restarted` replaces the record), and it is lost again in the same turn: two loss occurrences, two activities.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "b2000000000000000000000000000002",
+        "conn": "e1",
+        "lastSeq": 10
+      }
+    },
+    "terminals": {
+      "b2000000000000000000000000000002/t1": {
+        "state": "live",
+        "status": null,
+        "statusMs": 1794310000400,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f2"
+        }
+      }
+    },
+    "activity": [
+      "lifecycle core:b2000000000000000000000000000002:e1:1 1794310000100 created:::",
+      "status core:b2000000000000000000000000000002:e1:2 1794310000200 working||",
+      "turn core:b2000000000000000000000000000002:e1:5 1794310000401 1:null",
+      "lifecycle core:b2000000000000000000000000000002:e1:6 1794310000402 lost:signaled::9",
+      "lifecycle core:b2000000000000000000000000000002:e1:7 1794310002000 restarted:::",
+      "lifecycle core:b2000000000000000000000000000002:e1:9 1794310003000 lost:signaled::15"
+    ],
+    "messages": [],
+    "approvals": {},
+    "actions": {},
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 0
+      }
+    },
+    "historyGapAt": null
+  }
+}

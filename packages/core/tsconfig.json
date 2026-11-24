@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": { "@tremor/protocol": ["../protocol/src/index.ts"], "@tremor/protocol/conformance": ["../protocol/src/conformance.ts"] }
+  },
+  "include": ["src", "test"]
+}

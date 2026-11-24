@@ -1,0 +1,110 @@
+{
+  "description": "Real Claude Code 7501 sequence (probe 2026-11-08): a lead blocks on a permission; main's fresh terminal.get opens the approval; it is approved; the lead starts a helper; both finish. Covers a duplicate delivery, a composer send to a done agent (no guard), a reconnect whose snapshot repeats known facts (no activity), a late line from the retired connection, status clears and exits. Whole-terminal records omit records and foreground, as Core does. The herdr-app document is read after each subscribe; a status clear (null) adds no activity; status activity `at` is the receive time because status events carry no time, while created, finished and the approval use Core's own times.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "c0ffee0000000000000000000000000a",
+        "conn": "e2",
+        "lastSeq": 45
+      }
+    },
+    "terminals": {
+      "c0ffee0000000000000000000000000a/t1": {
+        "state": "finished",
+        "status": null,
+        "statusMs": 1794170361300,
+        "records": {},
+        "foreground": null,
+        "turn": 2,
+        "title": "Write one file",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "fixture",
+          "herdr.seen": "0"
+        }
+      },
+      "c0ffee0000000000000000000000000a/t2": {
+        "state": "finished",
+        "status": null,
+        "statusMs": 1794170360900,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "",
+        "parentKey": "c0ffee0000000000000000000000000a/t1",
+        "gone": false,
+        "labels": {
+          "tremor.test": "fixture",
+          "herdr.seen": "0"
+        }
+      }
+    },
+    "activity": [
+      "lifecycle core:c0ffee0000000000000000000000000a:e1:1 1794170353546 created:::",
+      "status core:c0ffee0000000000000000000000000a:e1:3 1794170355300 working||",
+      "status core:c0ffee0000000000000000000000000a:e1:5 1794170357600 blocked|permission|approve Write: /tmp/tremor-fixture/hi.txt",
+      "approval.request approval:c0ffee0000000000000000000000000a/t1:1794170357600 1794170357600 claude-code:permission",
+      "turn core:c0ffee0000000000000000000000000a:e1:6 1794170357800 1:blocked",
+      "action user:fixture-client:a1 1794170358000 approve",
+      "action.settled user:fixture-client:a1:settled 1794170358050 done",
+      "approval.resolved approval:c0ffee0000000000000000000000000a/t1:1794170357600:a1 1794170358050 sent",
+      "status core:c0ffee0000000000000000000000000a:e1:7 1794170359000 working||",
+      "lifecycle core:c0ffee0000000000000000000000000a:e1:8 1794170359500 created:::",
+      "status core:c0ffee0000000000000000000000000a:e1:9 1794170360000 working||",
+      "status core:c0ffee0000000000000000000000000a:e1:10 1794170360900 done||",
+      "turn core:c0ffee0000000000000000000000000a:e1:11 1794170360905 1:done",
+      "status core:c0ffee0000000000000000000000000a:e1:12 1794170361300 done||",
+      "turn core:c0ffee0000000000000000000000000a:e1:13 1794170361305 2:done",
+      "message user:fixture-client:a2 1794170362000 composer",
+      "action.settled user:fixture-client:a2:settled 1794170362100 done",
+      "lifecycle core:c0ffee0000000000000000000000000a:e2:43 1794170364001 finished:exited:0:",
+      "lifecycle core:c0ffee0000000000000000000000000a:e2:45 1794170365001 finished:exited:0:"
+    ],
+    "messages": [
+      {
+        "key": "user:fixture-client:a2",
+        "from": "person:fixture-client",
+        "to": "terminal:c0ffee0000000000000000000000000a/t1",
+        "via": "composer",
+        "text": "Thanks. Wrap up.",
+        "expectedStatus": "done"
+      }
+    ],
+    "approvals": {
+      "approval:c0ffee0000000000000000000000000a/t1:1794170357600": {
+        "state": "sent",
+        "msg": "approve Write: /tmp/tremor-fixture/hi.txt",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "c0ffee0000000000000000000000000a",
+          "address": "t1",
+          "turn": 1,
+          "statusMs": 1794170357600,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "permission",
+            "msg": "approve Write: /tmp/tremor-fixture/hi.txt"
+          }
+        },
+        "options": [
+          "Approve=enter",
+          "Deny=esc"
+        ]
+      }
+    },
+    "actions": {
+      "a1": "done",
+      "a2": "done"
+    },
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 3
+      }
+    },
+    "historyGapAt": null
+  }
+}

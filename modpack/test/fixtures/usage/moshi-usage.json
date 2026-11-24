@@ -1,0 +1,34 @@
+[
+ {
+  "accountId": "acct-fixture-codex-0000000000000000000000",
+  "accountLabel": "Pro 5x (owner.name@example.com)",
+  "agent": "codex",
+  "hostName": "Fixture-MBP.local",
+  "capturedAt": "2026-11-09T17:57:30.699104401Z",
+  "windows": [{ "label": "7d", "usedPercentage": 94, "resetsAt": "2026-11-11T08:44:00Z" }],
+  "cost": { "currency": "USD", "windows": [{ "label": "today", "startsAt": "2026-11-09T00:00:00Z", "endsAt": "2026-11-10T00:00:00Z",
+    "tokens": { "input": 1000, "cacheRead": 1000, "cacheCreation": 0, "cacheCreation1h": 0, "cacheCreation5m": 0, "output": 1000 },
+    "totalTokens": 1000, "pricingComplete": false,
+    "models": [{ "model": "gpt-6-astra", "tokens": { "input": 1000, "cacheRead": 1000, "cacheCreation": 0, "cacheCreation1h": 0, "cacheCreation5m": 0, "output": 1000 }, "totalTokens": 1000, "estimatedCostUsd": 1.5, "pricingComplete": true }] }] }
+ },
+ {
+  "accountId": "acct-fixture-claude-00",
+  "accountLabel": "Ultra (owner.name@example.com)",
+  "agent": "claude-code",
+  "hostName": "Fixture-MBP.local",
+  "capturedAt": "2026-11-09T17:52:51.956632835Z",
+  "windows": [
+   { "label": "7d", "usedPercentage": 32, "resetsAt": "2026-11-14T14:00:00Z" },
+   { "label": "Fable", "usedPercentage": 22, "resetsAt": "2026-11-14T14:00:00Z" }
+  ],
+  "cost": { "currency": "USD", "windows": [] }
+ },
+ {
+  "accountId": "acct-fixture-grok-0000000000000000000000",
+  "accountLabel": "Grok (owner.name@example.com)",
+  "agent": "grok",
+  "hostName": "Fixture-MBP.local",
+  "capturedAt": "2026-11-09T07:05:37.178265Z",
+  "windows": [{ "label": "7d", "usedPercentage": 79, "resetsAt": "2026-11-10T12:28:20.746Z" }]
+ }
+]

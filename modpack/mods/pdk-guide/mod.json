@@ -1,0 +1,10 @@
+{
+  "place": "none",
+  "title": "tremor guide",
+  "focusable": true,
+  "overlay": {
+    "kind": "dialog",
+    "width": 520,
+    "height": 400
+  }
+}

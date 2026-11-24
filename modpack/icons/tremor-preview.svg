@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 182">
+  <!-- tremor as Herdr's Settings shows a layout (its tile's own proportions, so nothing is cropped): T3 dark tokens at
+       the weight of Herdr's own tiles (surface 0a0a0a, canvas 000, border 1f1f1f, dim 8a8a8a bars, accent 346bf1),
+       thick enough to read about 130 px wide. Left: the sidebar (the top strip's two buttons, the machine tabs with
+       All chosen, two workspaces with their agent rows, the usage foot's bars). Right: the tab bar and one pane. -->
+  <rect width="320" height="182" fill="#000000"/>
+  <!-- sidebar -->
+  <rect x="0" y="0" width="108" height="182" fill="#0a0a0a"/>
+  <rect x="108" y="0" width="3" height="182" fill="#1f1f1f"/>
+  <!-- top strip: search and the sidebar toggle at its right end -->
+  <rect x="72" y="6" width="12" height="12" rx="3" fill="#8a8a8a"/>
+  <rect x="89" y="6" width="12" height="12" rx="3" fill="#8a8a8a"/>
+  <rect x="0" y="24" width="108" height="3" fill="#1f1f1f"/>
+  <!-- machine tabs: All chosen, then two machines -->
+  <rect x="6" y="31" width="96" height="20" rx="6" fill="#1a1a1a"/>
+  <rect x="9" y="34" width="26" height="14" rx="5" fill="#2e2e2e"/>
+  <rect x="14" y="37.5" width="16" height="7" rx="3.5" fill="#f5f5f5"/>
+  <rect x="41" y="37.5" width="26" height="7" rx="3.5" fill="#8a8a8a"/>
+  <rect x="73" y="37.5" width="22" height="7" rx="3.5" fill="#8a8a8a"/>
+  <!-- workspace one: its name, two agents, the first one shown -->
+  <rect x="8" y="59" width="44" height="8" rx="4" fill="#f5f5f5"/>
+  <rect x="5" y="71" width="98" height="18" rx="5" fill="#1c1c1c"/>
+  <circle cx="17" cy="80" r="5.5" fill="#d97757"/>
+  <rect x="28" y="76" width="46" height="8" rx="4" fill="#dddddd"/>
+  <circle cx="17" cy="99" r="5.5" fill="#03a27c"/>
+  <rect x="28" y="95" width="38" height="8" rx="4" fill="#8a8a8a"/>
+  <!-- workspace two -->
+  <rect x="8" y="112" width="36" height="8" rx="4" fill="#f5f5f5"/>
+  <circle cx="17" cy="130" r="5.5" fill="#d97757"/>
+  <rect x="28" y="126" width="42" height="8" rx="4" fill="#8a8a8a"/>
+  <!-- usage foot: per agent its mark and a bar the foot's width -->
+  <rect x="0" y="143" width="108" height="3" fill="#1f1f1f"/>
+  <circle cx="13" cy="157" r="4.5" fill="#d97757"/>
+  <rect x="23" y="154" width="78" height="6" rx="3" fill="#2a2a2a"/>
+  <rect x="23" y="154" width="38" height="6" rx="3" fill="#22c55e"/>
+  <circle cx="13" cy="171" r="4.5" fill="#03a27c"/>
+  <rect x="23" y="168" width="78" height="6" rx="3" fill="#2a2a2a"/>
+  <rect x="23" y="168" width="40" height="6" rx="3" fill="#22c55e"/>
+  <!-- tab bar: the shown tab, another, +; the Chat / Terminal / Factory buttons, Terminal on -->
+  <rect x="116" y="4" width="58" height="17" rx="5" fill="#1c1c1c"/>
+  <circle cx="126" cy="12.5" r="5" fill="#d97757"/>
+  <rect x="135" y="9" width="32" height="7" rx="3.5" fill="#f5f5f5"/>
+  <circle cx="186" cy="12.5" r="5" fill="#03a27c"/>
+  <rect x="195" y="9" width="26" height="7" rx="3.5" fill="#8a8a8a"/>
+  <rect x="228" y="11" width="11" height="3" rx="1.5" fill="#8a8a8a"/>
+  <rect x="232" y="7" width="3" height="11" rx="1.5" fill="#8a8a8a"/>
+  <rect x="263" y="8" width="9" height="9" rx="2" fill="#8a8a8a"/>
+  <rect x="278" y="4" width="17" height="17" rx="5" fill="#1a1a1a"/>
+  <rect x="282" y="8" width="9" height="9" rx="2" fill="#8a8a8a"/>
+  <rect x="301" y="8" width="9" height="9" rx="2" fill="#8a8a8a"/>
+  <rect x="111" y="24" width="209" height="3" fill="#1f1f1f"/>
+  <!-- one pane: its header (the agent's mark, its name, the folder), then the terminal -->
+  <rect x="117" y="33" width="196" height="142" rx="7" fill="#000000" stroke="#1f1f1f" stroke-width="2.5"/>
+  <path d="M118.5 52 V41 a6.5 6.5 0 0 1 6.5 -6.5 H305 a6.5 6.5 0 0 1 6.5 6.5 V52 Z" fill="#0a0a0a"/>
+  <rect x="118" y="52" width="194" height="2.5" fill="#1f1f1f"/>
+  <circle cx="130" cy="43.5" r="5" fill="#d97757"/>
+  <rect x="140" y="40" width="34" height="7" rx="3.5" fill="#f5f5f5"/>
+  <rect x="256" y="40" width="46" height="7" rx="3.5" fill="#8a8a8a"/>
+  <rect x="128" y="66" width="100" height="8" rx="4" fill="#8a8a8a"/>
+  <rect x="128" y="82" width="140" height="8" rx="4" fill="#dddddd"/>
+  <rect x="128" y="98" width="88" height="8" rx="4" fill="#dddddd"/>
+  <rect x="128" y="118" width="8" height="8" rx="2" fill="#346bf1"/>
+  <rect x="142" y="118" width="48" height="8" rx="4" fill="#8a8a8a"/>
+</svg>

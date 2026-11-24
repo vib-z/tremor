@@ -1,0 +1,6 @@
+{"sessionId":"6f0c2a1e-1111-4222-8333-944455556666","projectHash":"chat-sample","startTime":"2026-11-08T22:28:00.000Z","lastUpdated":"2026-11-08T22:28:04.000Z","kind":"main"}
+{"id":"m1","timestamp":"2026-11-08T22:28:00.100Z","type":"user","content":[{"text":"List two files here, then say done."}]}
+{"id":"m2","timestamp":"2026-11-08T22:28:02.400Z","type":"gemini","content":[{"text":"Listing the folder."}],"toolCalls":[{"id":"run_shell_command-1","name":"run_shell_command","args":{"command":"ls"},"status":"executing","timestamp":"2026-11-08T22:28:02.400Z"}],"model":"gemini-3-flash"}
+{"$patch":{"id":"m2","toolCalls":[{"id":"run_shell_command-1","result":[{"functionResponse":{"id":"run_shell_command-1","name":"run_shell_command","response":{"output":"alpha.txt\nbeta.md\n"}}}]}]}}
+{"id":"m3","timestamp":"2026-11-08T22:28:04.000Z","type":"gemini","content":[{"text":"alpha.txt and beta.md. Done."}],"model":"gemini-3-flash"}
+{"$set":{"lastUpdated":"2026-11-08T22:28:04.000Z"}}

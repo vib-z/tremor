@@ -1,0 +1,1 @@
+{"id":2,"result":{"account":{"type":"chatgpt","email":"owner.name@example.com","planType":"prolite","workspaceName":null},"requiresOpenaiAuth":true,"workspaceRouting":{"chatgptAccountId":"00000000-fixture-0000-0000-000000000000","backendOrigin":"https://chatgpt.com","accountRoutingOverride":"NO_CONSTRAINT"}}}

@@ -1,0 +1,5 @@
+You are currently using your subscription to power your Claude Code usage
+
+Current session: 38% used · resets Sep 7 at 2:59pm (Asia/Jakarta)
+Current week (all models): 4% used · resets Sep 14 at 5am (Asia/Jakarta)
+Current week (Opus): 61% used

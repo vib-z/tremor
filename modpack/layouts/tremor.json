@@ -1,0 +1,65 @@
+{
+  "id": "root",
+  "type": "row",
+  "cloned_from": { "name": "main", "version": "0.1.14" },
+  "preview": "pdk/icons/tremor-preview.svg",
+  "titlebar": "none",
+  "traffic_lights": [14, 12],
+  "theme": { "light": "pdk-t3-light", "dark": "pdk-t3-dark" },
+  "ui_font": "Geist",
+  "font_size": 13,
+  "background": { "image": "pdk/backgrounds/busy.png", "fit": "cover" },
+  "terminal_padding": [10, 12],
+  "divider": { "width": 1, "color": "border" },
+  "children": [
+    {
+      "id": "sidebar",
+      "type": "column",
+      "size": { "px": 280 },
+      "min": 240,
+      "max": 480,
+      "background": "chrome",
+      "resizable": false,
+      "children": [
+        { "id": "brand", "type": "block", "size": { "px": 40 }, "window_drag": true, "content": { "mod": "pdk-tree", "props": { "part": "head" } } },
+        { "id": "tree", "type": "block", "content": { "mod": "pdk-tree" } },
+        { "id": "usage", "type": "block", "size": { "px": 40 }, "content": { "mod": "pdk-usage" } }
+      ]
+    },
+    {
+      "id": "work",
+      "type": "column",
+      "background": "canvas",
+      "resizable": false,
+      "children": [
+        { "id": "tabs", "type": "block", "size": { "px": 40 }, "window_drag": true, "content": { "mod": "pdk-tabs" } },
+        {
+          "id": "work-body",
+          "type": "stack",
+          "active": "main",
+          "children": [
+            {
+              "id": "main",
+              "type": "block",
+              "padding": 8,
+              "content": {
+                "tab": "active",
+                "pane": {
+                  "gap": 8,
+                  "radius": 8,
+                  "background": "background",
+                  "lone": true,
+                  "border": { "width": 1, "color": "border" },
+                  "focus": { "width": 1, "color": "accent" },
+                  "header": { "content": { "mod": "pdk-pane" }, "height": 33, "position": "top", "reveal": "always" }
+                }
+              }
+            },
+            { "id": "chat", "type": "block", "content": { "mod": "pdk-chat" } },
+            { "id": "factory", "type": "block", "content": { "mod": "pdk-factory" } }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "description": "Persistence recovered without a usable base and logged a `history-gap` input; a later recovery logged another. Each sets `historyGapAt` (history before it is incomplete); the latest bounds it, and a replayed older gap never moves it back. A gap is a state event: no activity, nothing invented.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "a0100000000000000000000000000010",
+        "conn": "e1",
+        "lastSeq": 3
+      }
+    },
+    "terminals": {
+      "a0100000000000000000000000000010/t1": {
+        "state": "live",
+        "status": {
+          "state": "working"
+        },
+        "statusMs": 1794389999990,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f10"
+        }
+      }
+    },
+    "activity": [
+      "status core:a0100000000000000000000000000010:e1:3 1794390002000 working||"
+    ],
+    "messages": [],
+    "approvals": {},
+    "actions": {},
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": 1794390003000
+  }
+}

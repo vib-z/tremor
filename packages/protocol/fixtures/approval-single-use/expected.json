@@ -1,0 +1,111 @@
+{
+  "description": "A request taken in flight by one action is single use: a second approve leaves it with the first; a later status and a disconnect do not void it under its action; it ends as that action settles (unknown after a broken transport). A declined confirmation settles refused and spends the request; approving it again changes nothing.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "b8000000000000000000000000000008",
+        "conn": "e2",
+        "lastSeq": 5
+      }
+    },
+    "terminals": {
+      "b8000000000000000000000000000008/t1": {
+        "state": "live",
+        "status": {
+          "app": "claude-code",
+          "state": "blocked",
+          "kind": "permission",
+          "msg": "approve Edit: b.ts"
+        },
+        "statusMs": 1794370002000,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f8"
+        }
+      }
+    },
+    "activity": [
+      "lifecycle core:b8000000000000000000000000000008:e1:1 1794370000100 created:::",
+      "status core:b8000000000000000000000000000008:e1:2 1794370000200 blocked|permission|approve Edit: a.ts",
+      "approval.request approval:b8000000000000000000000000000008/t1:1794370000200 1794370000200 claude-code:permission",
+      "action user:fx:a1 1794370000300 approve",
+      "action user:fx:a2 1794370000301 approve",
+      "action.settled user:fx:a2:settled 1794370000302 refused",
+      "status core:b8000000000000000000000000000008:e1:3 1794370000800 working||",
+      "action.settled user:fx:a1:settled 1794370000950 unknown",
+      "approval.resolved approval:b8000000000000000000000000000008/t1:1794370000200:a1 1794370000950 unknown",
+      "status core:b8000000000000000000000000000008:e2:4 1794370002000 blocked|permission|approve Edit: b.ts",
+      "turn core:b8000000000000000000000000000008:e2:5 1794370002001 1:blocked",
+      "approval.request approval:b8000000000000000000000000000008/t1:1794370002000 1794370002000 claude-code:permission",
+      "action user:fx:a3 1794370002100 approve",
+      "action.settled user:fx:a3:settled 1794370002200 refused",
+      "approval.resolved approval:b8000000000000000000000000000008/t1:1794370002000:a3 1794370002200 refused",
+      "action user:fx:a4 1794370002300 approve",
+      "action.settled user:fx:a4:settled 1794370002301 refused"
+    ],
+    "messages": [],
+    "approvals": {
+      "approval:b8000000000000000000000000000008/t1:1794370000200": {
+        "state": "unknown",
+        "msg": "approve Edit: a.ts",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "b8000000000000000000000000000008",
+          "address": "t1",
+          "turn": 0,
+          "statusMs": 1794370000200,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "permission",
+            "msg": "approve Edit: a.ts"
+          }
+        },
+        "options": [
+          "Approve=enter",
+          "Deny=esc"
+        ]
+      },
+      "approval:b8000000000000000000000000000008/t1:1794370002000": {
+        "state": "refused",
+        "msg": "approve Edit: b.ts",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "b8000000000000000000000000000008",
+          "address": "t1",
+          "turn": 1,
+          "statusMs": 1794370002000,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "permission",
+            "msg": "approve Edit: b.ts"
+          }
+        },
+        "options": [
+          "Approve=enter",
+          "Deny=esc"
+        ]
+      }
+    },
+    "actions": {
+      "a1": "unknown",
+      "a2": "refused",
+      "a3": "refused",
+      "a4": "refused"
+    },
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": null
+  }
+}

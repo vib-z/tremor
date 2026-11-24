@@ -1,0 +1,125 @@
+{
+  "description": "Three approval requests, each opened by a fresh terminal.get, each voided while open: by a later status, by a disconnect, and by `missed`. Approving the voided one is a refused action that leaves it voided. After the reconnect the same blocked occurrence (same status_ms) does not reopen: its id is spent. A Claude question gets a request with no buttons.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "e5000000000000000000000000000005",
+        "conn": "e2",
+        "lastSeq": 20
+      }
+    },
+    "terminals": {
+      "e5000000000000000000000000000005/t1": {
+        "state": "live",
+        "status": {
+          "app": "claude-code",
+          "state": "blocked",
+          "kind": "question",
+          "msg": "Which file?"
+        },
+        "statusMs": 1794340002100,
+        "records": {},
+        "foreground": null,
+        "turn": 2,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f5"
+        }
+      }
+    },
+    "activity": [
+      "lifecycle core:e5000000000000000000000000000005:e1:1 1794340000100 created:::",
+      "status core:e5000000000000000000000000000005:e1:2 1794340000200 blocked|permission|approve Bash: ls",
+      "approval.request approval:e5000000000000000000000000000005/t1:1794340000200 1794340000200 claude-code:permission",
+      "status core:e5000000000000000000000000000005:e1:3 1794340000300 working||",
+      "approval.resolved approval:e5000000000000000000000000000005/t1:1794340000200:voided 1794340000300 voided",
+      "action user:fx:a1 1794340000400 approve",
+      "action.settled user:fx:a1:settled 1794340000410 refused",
+      "status core:e5000000000000000000000000000005:e1:4 1794340000500 blocked|permission|approve Write: /tmp/b",
+      "turn core:e5000000000000000000000000000005:e1:5 1794340000501 1:blocked",
+      "approval.request approval:e5000000000000000000000000000005/t1:1794340000500 1794340000500 claude-code:permission",
+      "approval.resolved approval:e5000000000000000000000000000005/t1:1794340000500:voided 1794340001000 voided",
+      "status core:e5000000000000000000000000000005:e2:6 1794340002000 working||",
+      "status core:e5000000000000000000000000000005:e2:7 1794340002100 blocked|question|Which file?",
+      "turn core:e5000000000000000000000000000005:e2:8 1794340002101 2:blocked",
+      "approval.request approval:e5000000000000000000000000000005/t1:1794340002100 1794340002100 claude-code:question",
+      "approval.resolved approval:e5000000000000000000000000000005/t1:1794340002100:voided 1794340003000 voided"
+    ],
+    "messages": [],
+    "approvals": {
+      "approval:e5000000000000000000000000000005/t1:1794340000200": {
+        "state": "voided",
+        "msg": "approve Bash: ls",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "e5000000000000000000000000000005",
+          "address": "t1",
+          "turn": 0,
+          "statusMs": 1794340000200,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "permission",
+            "msg": "approve Bash: ls"
+          }
+        },
+        "options": [
+          "Approve=enter",
+          "Deny=esc"
+        ]
+      },
+      "approval:e5000000000000000000000000000005/t1:1794340000500": {
+        "state": "voided",
+        "msg": "approve Write: /tmp/b",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "e5000000000000000000000000000005",
+          "address": "t1",
+          "turn": 1,
+          "statusMs": 1794340000500,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "permission",
+            "msg": "approve Write: /tmp/b"
+          }
+        },
+        "options": [
+          "Approve=enter",
+          "Deny=esc"
+        ]
+      },
+      "approval:e5000000000000000000000000000005/t1:1794340002100": {
+        "state": "voided",
+        "msg": "Which file?",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "e5000000000000000000000000000005",
+          "address": "t1",
+          "turn": 2,
+          "statusMs": 1794340002100,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "question",
+            "msg": "Which file?"
+          }
+        },
+        "options": []
+      }
+    },
+    "actions": {
+      "a1": "refused"
+    },
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": null
+  }
+}

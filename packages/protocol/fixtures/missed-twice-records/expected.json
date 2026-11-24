@@ -1,0 +1,66 @@
+{
+  "description": "Two `missed` snapshots in one connection give two gaps keyed by their own seq: the first finds a changed status (one gap, no status activity), the second a terminal that appeared. Child 7501 records change, get added and disappear (status activity per record id, `gone` when it went); a root status that did not change adds no activity. An event at or below the missed seq is dropped. Documents are re-read after each missed; an older version never replaces a newer one.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "a1000000000000000000000000000001",
+        "conn": "e1",
+        "lastSeq": 31
+      }
+    },
+    "terminals": {
+      "a1000000000000000000000000000001/t1": {
+        "state": "live",
+        "status": {
+          "app": "claude-code",
+          "state": "idle"
+        },
+        "statusMs": 1794300002500,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "Build",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f1"
+        }
+      },
+      "a1000000000000000000000000000001/t2": {
+        "state": "live",
+        "status": null,
+        "statusMs": null,
+        "records": {},
+        "foreground": null,
+        "turn": 0,
+        "title": "",
+        "parentKey": "a1000000000000000000000000000001/t1",
+        "gone": false,
+        "labels": {
+          "tremor.test": "f1"
+        }
+      }
+    },
+    "activity": [
+      "status core:a1000000000000000000000000000001:e1:11:rec:build 1794300001000 working@build||",
+      "status core:a1000000000000000000000000000001:e1:12:rec:build 1794300002000 done@build||",
+      "status core:a1000000000000000000000000000001:e1:12:rec:test 1794300002000 working@test||",
+      "observation gap:a1000000000000000000000000000001:e1:20:t1:status 1794300003000 gap:a1000000000000000000000000000001/t1>:while events were missed: status now done",
+      "status core:a1000000000000000000000000000001:e1:21:rec:test 1794300004000 working@test||",
+      "status core:a1000000000000000000000000000001:e1:22:rec:test 1794300005000 null@test gone||",
+      "observation gap:a1000000000000000000000000000001:e1:30:t2:appeared 1794300006000 gap:a1000000000000000000000000000001/t2>:while events were missed: started",
+      "status core:a1000000000000000000000000000001:e1:31 1794300007000 idle||"
+    ],
+    "messages": [],
+    "approvals": {},
+    "actions": {},
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 2
+      }
+    },
+    "historyGapAt": null
+  }
+}

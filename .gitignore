@@ -1,0 +1,12 @@
+.refs/
+node_modules/
+dist/
+out/
+.DS_Store
+*.log
+build/
+DerivedData/
+.claude/settings.local.json
+.sandbox-home/
+modpack/.sandbox/
+__pycache__/

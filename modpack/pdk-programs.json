@@ -1,0 +1,76 @@
+{
+  "programs": {
+    "claude": {
+      "icon": "pdk/icons/agents-colour/claude.svg",
+      "tint": false,
+      "color": "#d66d4b",
+      "tile": "#111111"
+    },
+    "codex": {
+      "icon": "pdk/icons/agents-colour/codex.svg",
+      "tint": false,
+      "color": "#039e79",
+      "tile": "#111111"
+    },
+    "cursor": {
+      "icon": "pdk/icons/agents-colour/cursor.svg",
+      "tint": false,
+      "color": "#b36de0",
+      "tile": "#111111"
+    },
+    "hermes": {
+      "icon": "pdk/icons/agents-colour/hermes.svg",
+      "tint": false,
+      "color": "#a38900",
+      "tile": "#111111"
+    },
+    "opencode": {
+      "icon": "pdk/icons/agents-colour/opencode.svg",
+      "tint": false,
+      "color": "#c07d00",
+      "tile": "#111111"
+    },
+    "gemini": {
+      "icon": "pdk/icons/agents-colour/gemini.svg",
+      "tint": false,
+      "color": "#4184f3",
+      "tile": "#111111"
+    },
+    "antigravity": {
+      "icon": "pdk/icons/agents-colour/antigravity.svg",
+      "tint": false,
+      "color": "#3185fd",
+      "tile": "#111111"
+    },
+    "qoder": {
+      "icon": "pdk/icons/agents-colour/qoder.svg",
+      "tint": false,
+      "color": "#1ca041",
+      "tile": "#111111"
+    },
+    "copilot": {
+      "icon": "pdk/icons/agents-colour/copilot.svg",
+      "tint": false,
+      "color": "#8253dc",
+      "tile": "#111111"
+    },
+    "pi": {
+      "icon": "pdk/icons/agents-colour/pi.svg",
+      "tint": false,
+      "color": "#5390c4",
+      "tile": "#111111"
+    },
+    "grok": {
+      "icon": "pdk/icons/agents-colour/grok.svg",
+      "tint": false,
+      "color": "#1791e1",
+      "tile": "#111111"
+    },
+    "kimi": {
+      "icon": "pdk/icons/agents-colour/kimi.svg",
+      "tint": false,
+      "color": "#1783ff",
+      "tile": "#111111"
+    }
+  }
+}

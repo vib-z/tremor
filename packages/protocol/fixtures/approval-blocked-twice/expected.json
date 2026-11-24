@@ -1,0 +1,101 @@
+{
+  "description": "Blocked A, then blocked B with no other word between: Core keeps one status_ms for both, so the second request takes the occurrence counter (`approval:<t>:<ms>:1`). B's status voids A; B's fresh get opens its own request; a repeated get of B and a late get of A open nothing. B is approved: its later status does not void it under its action, which settles it sent.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "b9000000000000000000000000000009",
+        "conn": "e1",
+        "lastSeq": 6
+      }
+    },
+    "terminals": {
+      "b9000000000000000000000000000009/t1": {
+        "state": "live",
+        "status": {
+          "app": "claude-code",
+          "state": "working"
+        },
+        "statusMs": 1794380000300,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f9"
+        }
+      }
+    },
+    "activity": [
+      "lifecycle core:b9000000000000000000000000000009:e1:1 1794380000100 created:::",
+      "status core:b9000000000000000000000000000009:e1:2 1794380000200 working||",
+      "status core:b9000000000000000000000000000009:e1:3 1794380000300 blocked|permission|approve Bash: ls",
+      "turn core:b9000000000000000000000000000009:e1:4 1794380000301 1:blocked",
+      "approval.request approval:b9000000000000000000000000000009/t1:1794380000300 1794380000300 claude-code:permission",
+      "status core:b9000000000000000000000000000009:e1:5 1794380000400 blocked|permission|approve Write: /tmp/b",
+      "approval.resolved approval:b9000000000000000000000000000009/t1:1794380000300:voided 1794380000400 voided",
+      "approval.request approval:b9000000000000000000000000000009/t1:1794380000300:1 1794380000300 claude-code:permission",
+      "action user:fx:a1 1794380000500 approve",
+      "status core:b9000000000000000000000000000009:e1:6 1794380000600 working||",
+      "action.settled user:fx:a1:settled 1794380000610 done",
+      "approval.resolved approval:b9000000000000000000000000000009/t1:1794380000300:1:a1 1794380000610 sent"
+    ],
+    "messages": [],
+    "approvals": {
+      "approval:b9000000000000000000000000000009/t1:1794380000300": {
+        "state": "voided",
+        "msg": "approve Bash: ls",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "b9000000000000000000000000000009",
+          "address": "t1",
+          "turn": 1,
+          "statusMs": 1794380000300,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "permission",
+            "msg": "approve Bash: ls"
+          }
+        },
+        "options": [
+          "Approve=enter",
+          "Deny=esc"
+        ]
+      },
+      "approval:b9000000000000000000000000000009/t1:1794380000300:1": {
+        "state": "sent",
+        "msg": "approve Write: /tmp/b",
+        "dialog": "claude-code",
+        "fingerprint": {
+          "coreId": "b9000000000000000000000000000009",
+          "address": "t1",
+          "turn": 1,
+          "statusMs": 1794380000300,
+          "status": {
+            "app": "claude-code",
+            "state": "blocked",
+            "kind": "permission",
+            "msg": "approve Write: /tmp/b"
+          }
+        },
+        "options": [
+          "Approve=enter",
+          "Deny=esc"
+        ]
+      }
+    },
+    "actions": {
+      "a1": "done"
+    },
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": null
+  }
+}

@@ -1,0 +1,5 @@
+{"type":"session","version":3,"id":"019a0000-0000-7000-8000-0000000000aa","timestamp":"2026-11-08T22:28:00.000Z","cwd":"/private/tmp/chat-sample/pi"}
+{"type":"message","id":"a1","parentId":null,"timestamp":"2026-11-08T22:28:00.100Z","message":{"role":"user","content":[{"type":"text","text":"List two files here, then say done."}],"timestamp":1794176880100}}
+{"type":"message","id":"a2","parentId":"a1","timestamp":"2026-11-08T22:28:02.400Z","message":{"role":"assistant","content":[{"type":"text","text":"Listing the folder."},{"type":"toolCall","id":"call_01","name":"bash","arguments":{"command":"ls"}}],"stopReason":"toolUse"}}
+{"type":"message","id":"a3","parentId":"a2","timestamp":"2026-11-08T22:28:02.900Z","message":{"role":"toolResult","toolCallId":"call_01","toolName":"bash","content":[{"type":"text","text":"alpha.txt\nbeta.md\n"}],"isError":false,"timestamp":1794176882900}}
+{"type":"message","id":"a4","parentId":"a3","timestamp":"2026-11-08T22:28:04.000Z","message":{"role":"assistant","content":[{"type":"text","text":"alpha.txt and beta.md. Done."}],"stopReason":"stop"}}

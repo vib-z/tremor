@@ -1,0 +1,9 @@
+{
+  "place": "none",
+  "title": "tremor settings",
+  "focusable": true,
+  "overlay": {
+    "kind": "dialog",
+    "width": 520
+  }
+}

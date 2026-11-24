@@ -1,0 +1,8 @@
+{
+  "name": "@tremor/core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { "./store": "./src/store/index.ts", "./node": "./src/node/index.ts" },
+  "dependencies": { "@tremor/protocol": "workspace:*" }
+}

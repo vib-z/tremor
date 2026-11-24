@@ -1,0 +1,7 @@
+{"t":1794390000000,"source":"local","conn":"e1","kind":"connecting","attempt":0}
+{"t":1794390000010,"source":"local","conn":"e1","kind":"hello","result":{"core":{"id":"a0100000000000000000000000000010","name":"fixture"},"generation":1,"version":"0.1.19","features":["framed","attach","events","status","shell","resize_notifications","automatic_input"]}}
+{"t":1794390000020,"source":"local","conn":"e1","kind":"subscribed","result":{"seq":2,"terminals":[{"address":"t1","name":null,"labels":{"tremor.test":"f10"},"parent":null,"state":"live","status":{"state":"idle"},"status_ms":1794389999990,"reported":true,"turn":1,"title":"","cwd":"/tmp/w","argv":["sh"],"exit_code":null,"signal":null,"reason":null,"keep":false,"created_ms":1794389999500,"finished_ms":null,"cols":80,"rows":24,"pid":1}],"channel":1}}
+{"t":1794390000025,"source":"local","conn":"e1","kind":"doc","name":"herdr-app","version":1,"value":{}}
+{"t":1794390001000,"kind":"history-gap","reason":"no usable checkpoint"}
+{"t":1794390002000,"source":"local","conn":"e1","kind":"notification","msg":{"method":"event","params":{"seq":3,"type":"status","terminal":"t1","data":{"status":{"state":"working"},"records":{},"reported":true}}}}
+{"t":1794390003000,"kind":"history-gap","reason":"log 4 is missing"}

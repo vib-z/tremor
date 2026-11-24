@@ -1,0 +1,16 @@
+id = "vib-z.tremor"
+name = "tremor"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "A calmer layout for the Herdr desktop app: factory map of every agent, readable Claude and Codex chat, usage per machine"
+platforms = ["macos"]
+
+[[actions]]
+id = "install"
+title = "Install tremor into the Herdr desktop app (quit the app first)"
+command = ["sh", "-c", "modpack/install.sh --live \"$HOME/.config/herdr-app\""]
+
+[[actions]]
+id = "uninstall"
+title = "Remove tremor from the Herdr desktop app (quit the app first)"
+command = ["sh", "-c", "modpack/uninstall.sh --live \"$HOME/.config/herdr-app\""]

@@ -1,0 +1,77 @@
+{
+  "description": "After a reconnect a different core id answers: the old core's terminals are kept as history and marked gone (one gap for the live one, none for the finished one), its documents are dropped (the new core's versions start again), and the new core's t1 is a different terminal. A late line from the retired connection is dropped.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "c3000000000000000000000000000032",
+        "conn": "e2",
+        "lastSeq": 1
+      }
+    },
+    "terminals": {
+      "c3000000000000000000000000000031/t1": {
+        "state": "live",
+        "status": {
+          "state": "idle"
+        },
+        "statusMs": 1794319999900,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "",
+        "parentKey": null,
+        "gone": true,
+        "labels": {
+          "tremor.test": "f3",
+          "herdr.seen": "1"
+        }
+      },
+      "c3000000000000000000000000000031/t2": {
+        "state": "finished",
+        "status": null,
+        "statusMs": null,
+        "records": {},
+        "foreground": null,
+        "turn": 0,
+        "title": "",
+        "parentKey": "c3000000000000000000000000000031/t1",
+        "gone": true,
+        "labels": {
+          "tremor.test": "f3",
+          "herdr.seen": "1"
+        }
+      },
+      "c3000000000000000000000000000032/t1": {
+        "state": "live",
+        "status": {
+          "state": "working"
+        },
+        "statusMs": null,
+        "records": {},
+        "foreground": null,
+        "turn": 0,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f3"
+        }
+      }
+    },
+    "activity": [
+      "observation gap:c3000000000000000000000000000031:e2:0:t1:gone 1794320001510 gap:c3000000000000000000000000000031/t1>:its core went away: core c3000000000000000000000000000032 answered instead",
+      "status core:c3000000000000000000000000000032:e2:1 1794320002000 working||"
+    ],
+    "messages": [],
+    "approvals": {},
+    "actions": {},
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 1
+      }
+    },
+    "historyGapAt": null
+  }
+}

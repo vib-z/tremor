@@ -1,0 +1,936 @@
+{
+  "rule": "brand if it passes every resting ground; otherwise nearest HSL lightness on a 0.01-point grid, exact brand hue/saturation; original 8-bit SVG paths unchanged",
+  "grounds": {
+    "paper": {
+      "chrome": "#f1f1ee",
+      "popover": "#ffffff",
+      "hoverChrome": "#e6e6e3",
+      "selectedChrome": "#e0e0dd",
+      "menuHover": "#ededed"
+    },
+    "graphite": {
+      "chrome": "#101114",
+      "popover": "#25272b",
+      "hoverChrome": "#1d1e21",
+      "selectedChrome": "#262629",
+      "menuHover": "#393a3e"
+    },
+    "pdk-t3-light": {
+      "chrome": "#fcfcfc",
+      "popover": "#ffffff",
+      "hoverChrome": "#f4f4f5",
+      "selectedChrome": "#ebebed",
+      "menuHover": "#ebebed"
+    },
+    "pdk-t3-dark": {
+      "chrome": "#000000",
+      "popover": "#111111",
+      "hoverChrome": "#141414",
+      "selectedChrome": "#1c1c1c",
+      "menuHover": "#1c1c1c"
+    },
+    "pdk-moshi": {
+      "chrome": "#131416",
+      "popover": "#1e2022",
+      "hoverChrome": "#1b2d19",
+      "selectedChrome": "#21341e",
+      "menuHover": "#21341e"
+    },
+    "pdk-moshi-forest": {
+      "chrome": "#111311",
+      "popover": "#1e2420",
+      "hoverChrome": "#1b2d1e",
+      "selectedChrome": "#223626",
+      "menuHover": "#223626"
+    }
+  },
+  "marks": {
+    "claude": {
+      "brand": "#d97757",
+      "color": "#d66d4b",
+      "lightnessStep": -2.83,
+      "ratios": {
+        "paper": {
+          "chrome": 3.0182214491632458,
+          "popover": 3.4155872008465997,
+          "hoverChrome": 2.7312555743106097,
+          "selectedChrome": 2.582153365458784,
+          "menuHover": 2.91747498126381
+        },
+        "graphite": {
+          "chrome": 5.527477967724105,
+          "popover": 4.379886536322235,
+          "hoverChrome": 4.879929181244764,
+          "selectedChrome": 4.417892045755275,
+          "menuHover": 3.3256366880024255
+        },
+        "pdk-t3-light": {
+          "chrome": 3.3292063187157614,
+          "popover": 3.4155872008465997,
+          "hoverChrome": 3.107437348429322,
+          "selectedChrome": 2.8688738020691034,
+          "menuHover": 2.8688738020691034
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.148283959722903,
+          "popover": 5.528496230432815,
+          "hoverChrome": 5.3936658579365995,
+          "selectedChrome": 4.989498387687599,
+          "menuHover": 4.989498387687599
+        },
+        "pdk-moshi": {
+          "chrome": 5.396368783958978,
+          "popover": 4.785002192082978,
+          "hoverChrome": 4.281552097457852,
+          "selectedChrome": 3.9046374860226885,
+          "menuHover": 3.9046374860226885
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.464766014373876,
+          "popover": 4.62829851656005,
+          "hoverChrome": 4.267554518842883,
+          "selectedChrome": 3.786656105486646,
+          "menuHover": 3.786656105486646
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.7312555743106097
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.582153365458784
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.91747498126381
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.8688738020691034
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.8688738020691034
+        }
+      ]
+    },
+    "codex": {
+      "brand": "#03a27c",
+      "color": "#039e79",
+      "lightnessStep": -0.7,
+      "ratios": {
+        "paper": {
+          "chrome": 3.007251945715132,
+          "popover": 3.4031735008553663,
+          "hoverChrome": 2.7213290271885007,
+          "selectedChrome": 2.5727687193275965,
+          "menuHover": 2.9068716334293994
+        },
+        "graphite": {
+          "chrome": 5.54764045817081,
+          "popover": 4.395862976384394,
+          "hoverChrome": 4.897729618636278,
+          "selectedChrome": 4.434007117888941,
+          "menuHover": 3.337767558237024
+        },
+        "pdk-t3-light": {
+          "chrome": 3.317106563675336,
+          "popover": 3.4031735008553663,
+          "hoverChrome": 3.096143596369531,
+          "selectedChrome": 2.8584470916391167,
+          "menuHover": 2.8584470916391167
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.170710953973337,
+          "popover": 5.548662435179651,
+          "hoverChrome": 5.413340244151865,
+          "selectedChrome": 5.007698498870861,
+          "menuHover": 5.007698498870861
+        },
+        "pdk-moshi": {
+          "chrome": 5.4160530295930265,
+          "popover": 4.802456365857834,
+          "hoverChrome": 4.29716984460513,
+          "selectedChrome": 3.918880367942704,
+          "menuHover": 3.918880367942704
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.484699751460062,
+          "popover": 4.645181084915735,
+          "hoverChrome": 4.283121207252931,
+          "selectedChrome": 3.800468628665869,
+          "menuHover": 3.800468628665869
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.7213290271885007
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.5727687193275965
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.9068716334293994
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.8584470916391167
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.8584470916391167
+        }
+      ]
+    },
+    "cursor": {
+      "brand": "#c691e8",
+      "color": "#b36de0",
+      "lightnessStep": -8.51,
+      "ratios": {
+        "paper": {
+          "chrome": 3.0024594867563694,
+          "popover": 3.3977500878434848,
+          "hoverChrome": 2.7169922247151748,
+          "selectedChrome": 2.5686686676124966,
+          "menuHover": 2.90223914394961
+        },
+        "graphite": {
+          "chrome": 5.556495478307145,
+          "popover": 4.4028795549579245,
+          "hoverChrome": 4.905547265566059,
+          "selectedChrome": 4.441084581291553,
+          "menuHover": 3.3430952284711437
+        },
+        "pdk-t3-light": {
+          "chrome": 3.311820309861149,
+          "popover": 3.3977500878434848,
+          "hoverChrome": 3.091209476653629,
+          "selectedChrome": 2.853891773155744,
+          "menuHover": 2.853891773155744
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.180560505357377,
+          "popover": 5.557519086572924,
+          "hoverChrome": 5.4219808972778605,
+          "selectedChrome": 5.015691675677926,
+          "menuHover": 5.015691675677926
+        },
+        "pdk-moshi": {
+          "chrome": 5.424698012806721,
+          "popover": 4.810121939743558,
+          "hoverChrome": 4.304028891399914,
+          "selectedChrome": 3.925135597500508,
+          "menuHover": 3.925135597500508
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.493454307042228,
+          "popover": 4.652595619501023,
+          "hoverChrome": 4.2899578299256795,
+          "selectedChrome": 3.8065348520428324,
+          "menuHover": 3.8065348520428324
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.7169922247151748
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.5686686676124966
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.90223914394961
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.853891773155744
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.853891773155744
+        }
+      ]
+    },
+    "hermes": {
+      "brand": "#fdd600",
+      "color": "#a38900",
+      "lightnessStep": -17.74,
+      "ratios": {
+        "paper": {
+          "chrome": 3.024475655160633,
+          "popover": 3.4226648080785202,
+          "hoverChrome": 2.736915144120501,
+          "selectedChrome": 2.587503973204582,
+          "menuHover": 2.923520425520429
+        },
+        "graphite": {
+          "chrome": 5.516047891969591,
+          "popover": 4.3708295242095385,
+          "hoverChrome": 4.869838148671865,
+          "selectedChrome": 4.408756443396821,
+          "menuHover": 3.318759721780612
+        },
+        "pdk-t3-light": {
+          "chrome": 3.3361049318479505,
+          "popover": 3.4226648080785202,
+          "hoverChrome": 3.1138764231057143,
+          "selectedChrome": 2.8748185374176716,
+          "menuHover": 2.8748185374176716
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.135570141263519,
+          "popover": 5.51706404904894,
+          "hoverChrome": 5.382512487500619,
+          "selectedChrome": 4.979180780836644,
+          "menuHover": 4.979180780836644
+        },
+        "pdk-moshi": {
+          "chrome": 5.385209824238087,
+          "popover": 4.775107455666048,
+          "hoverChrome": 4.2726984276455795,
+          "selectedChrome": 3.896563224574745,
+          "menuHover": 3.896563224574745
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.453465618444718,
+          "popover": 4.618727822118989,
+          "hoverChrome": 4.25872979412725,
+          "selectedChrome": 3.7788258135533748,
+          "menuHover": 3.7788258135533748
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.736915144120501
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.587503973204582
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.923520425520429
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.8748185374176716
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.8748185374176716
+        }
+      ]
+    },
+    "opencode": {
+      "brand": "#ffcb6b",
+      "color": "#c07d00",
+      "lightnessStep": -33.24,
+      "ratios": {
+        "paper": {
+          "chrome": 3.0052898169911337,
+          "popover": 3.400953046899623,
+          "hoverChrome": 2.719553453359608,
+          "selectedChrome": 2.5710900760028856,
+          "menuHover": 2.9049749994153933
+        },
+        "graphite": {
+          "chrome": 5.551262466481574,
+          "popover": 4.398732998757598,
+          "hoverChrome": 4.900927305565763,
+          "selectedChrome": 4.436902044254856,
+          "menuHover": 3.3399467589127863
+        },
+        "pdk-t3-light": {
+          "chrome": 3.3149422654433818,
+          "popover": 3.400953046899623,
+          "hoverChrome": 3.0941234688931094,
+          "selectedChrome": 2.856582052977316,
+          "menuHover": 2.856582052977316
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.17473975982821,
+          "popover": 5.552285110730702,
+          "hoverChrome": 5.416874568969982,
+          "selectedChrome": 5.0109679835675465,
+          "menuHover": 5.0109679835675465
+        },
+        "pdk-moshi": {
+          "chrome": 5.419589125566194,
+          "popover": 4.805591849673047,
+          "hoverChrome": 4.299975431053509,
+          "selectedChrome": 3.9214389723383207,
+          "menuHover": 3.9214389723383207
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.488280666306945,
+          "popover": 4.648213885008211,
+          "hoverChrome": 4.285917621462837,
+          "selectedChrome": 3.8029499230218415,
+          "menuHover": 3.8029499230218415
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.719553453359608
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.5710900760028856
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.9049749994153933
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.856582052977316
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.856582052977316
+        }
+      ]
+    },
+    "gemini": {
+      "brand": "#4184f3",
+      "color": "#4184f3",
+      "lightnessStep": 0,
+      "ratios": {
+        "paper": {
+          "chrome": 3.1887515580876458,
+          "popover": 3.608568553345647,
+          "hoverChrome": 2.8855720545399475,
+          "selectedChrome": 2.7280455413934788,
+          "menuHover": 3.082312894822823
+        },
+        "graphite": {
+          "chrome": 5.231875942059079,
+          "popover": 4.145656144110846,
+          "hoverChrome": 4.618957186512098,
+          "selectedChrome": 4.181629170440302,
+          "menuHover": 3.147786147965952
+        },
+        "pdk-t3-light": {
+          "chrome": 3.517307134287062,
+          "popover": 3.608568553345647,
+          "hoverChrome": 3.2830081733104155,
+          "selectedChrome": 3.030965739389618,
+          "menuHover": 3.030965739389618
+        },
+        "pdk-t3-dark": {
+          "chrome": 5.819482071507292,
+          "popover": 5.232839749459036,
+          "hoverChrome": 5.105219922434695,
+          "selectedChrome": 4.7226667803858495,
+          "menuHover": 4.7226667803858495
+        },
+        "pdk-moshi": {
+          "chrome": 5.10777829963895,
+          "popover": 4.529106763996142,
+          "hoverChrome": 4.0525804976814,
+          "selectedChrome": 3.695822768515793,
+          "menuHover": 3.695822768515793
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.172517738927664,
+          "popover": 4.380783388527635,
+          "hoverChrome": 4.0393314905880455,
+          "selectedChrome": 3.5841508722112305,
+          "menuHover": 3.5841508722112305
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.8855720545399475
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.7280455413934788
+        }
+      ]
+    },
+    "antigravity": {
+      "brand": "#3185fd",
+      "color": "#3185fd",
+      "lightnessStep": 0,
+      "ratios": {
+        "paper": {
+          "chrome": 3.143116778999611,
+          "popover": 3.556925700098492,
+          "hoverChrome": 2.8442761301467314,
+          "selectedChrome": 2.689004006373971,
+          "menuHover": 3.0382013779883796
+        },
+        "graphite": {
+          "chrome": 5.307837326767114,
+          "popover": 4.205846749682831,
+          "hoverChrome": 4.686019629826934,
+          "selectedChrome": 4.242342066854498,
+          "menuHover": 3.1934887214237926
+        },
+        "pdk-t3-light": {
+          "chrome": 3.466970339107503,
+          "popover": 3.556925700098492,
+          "hoverChrome": 3.23602447138066,
+          "selectedChrome": 2.9875890606422155,
+          "menuHover": 2.9875890606422155
+        },
+        "pdk-t3-dark": {
+          "chrome": 5.903974884664727,
+          "popover": 5.308815127645798,
+          "hoverChrome": 5.17934239377039,
+          "selectedChrome": 4.791234978891634,
+          "menuHover": 4.791234978891634
+        },
+        "pdk-moshi": {
+          "chrome": 5.181937915944669,
+          "popover": 4.594864672840647,
+          "hoverChrome": 4.111419741893965,
+          "selectedChrome": 3.749482262403076,
+          "menuHover": 3.749482262403076
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.247617304404208,
+          "popover": 4.444387796580084,
+          "hoverChrome": 4.097978373029046,
+          "selectedChrome": 3.6361890065765734,
+          "menuHover": 3.6361890065765734
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.8442761301467314
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.689004006373971
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.9875890606422155
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.9875890606422155
+        }
+      ]
+    },
+    "qoder": {
+      "brand": "#29da5b",
+      "color": "#1ca041",
+      "lightnessStep": -13.88,
+      "ratios": {
+        "paper": {
+          "chrome": 3.015404136169346,
+          "popover": 3.4123989728239645,
+          "hoverChrome": 2.728706125256333,
+          "selectedChrome": 2.5797430935979286,
+          "menuHover": 2.9147517085309995
+        },
+        "graphite": {
+          "chrome": 5.532642328718098,
+          "popover": 4.383978694684218,
+          "hoverChrome": 4.884488532917304,
+          "selectedChrome": 4.42201971292826,
+          "menuHover": 3.3287438534207237
+        },
+        "pdk-t3-light": {
+          "chrome": 3.3260987216162543,
+          "popover": 3.4123989728239645,
+          "hoverChrome": 3.1045367582085857,
+          "selectedChrome": 2.866195895369226,
+          "menuHover": 2.866195895369226
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.154028344060027,
+          "popover": 5.533661542796718,
+          "hoverChrome": 5.398705197348536,
+          "selectedChrome": 4.994160110629496,
+          "menuHover": 4.994160110629496
+        },
+        "pdk-moshi": {
+          "chrome": 5.40141064873344,
+          "popover": 4.789472852811301,
+          "hoverChrome": 4.2855523812717315,
+          "selectedChrome": 3.9082856159014954,
+          "menuHover": 3.9082856159014954
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.469871783154997,
+          "popover": 4.632622767957713,
+          "hoverChrome": 4.271541724622001,
+          "selectedChrome": 3.790194004543509,
+          "menuHover": 3.790194004543509
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.728706125256333
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.5797430935979286
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.9147517085309995
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.866195895369226
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.866195895369226
+        }
+      ]
+    },
+    "copilot": {
+      "brand": "#7f4edb",
+      "color": "#8253dc",
+      "lightnessStep": 1.07,
+      "ratios": {
+        "paper": {
+          "chrome": 4.397439201324816,
+          "popover": 4.976386691808234,
+          "hoverChrome": 3.9793403279405255,
+          "selectedChrome": 3.7621038165536915,
+          "menuHover": 4.250655250975907
+        },
+        "graphite": {
+          "chrome": 3.793833592272527,
+          "popover": 3.0061740216547976,
+          "hoverChrome": 3.349382731839309,
+          "selectedChrome": 3.0322594405782977,
+          "menuHover": 2.282580275545172
+        },
+        "pdk-t3-light": {
+          "chrome": 4.850532878983308,
+          "popover": 4.976386691808234,
+          "hoverChrome": 4.5274235313092355,
+          "selectedChrome": 4.179845095319281,
+          "menuHover": 4.179845095319281
+        },
+        "pdk-t3-dark": {
+          "chrome": 4.219929298213235,
+          "popover": 3.7945324859257665,
+          "hoverChrome": 3.701990462344373,
+          "selectedChrome": 3.4245865297574087,
+          "menuHover": 3.4245865297574087
+        },
+        "pdk-moshi": {
+          "chrome": 3.703845639624319,
+          "popover": 3.2842287497885128,
+          "hoverChrome": 2.938681306239313,
+          "selectedChrome": 2.6799826153298603,
+          "menuHover": 2.6799826153298603
+        },
+        "pdk-moshi-forest": {
+          "chrome": 3.7507906861503555,
+          "popover": 3.1766737904195392,
+          "hoverChrome": 2.9290739438454634,
+          "selectedChrome": 2.5990050470149884,
+          "menuHover": 2.5990050470149884
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "graphite",
+          "role": "menuHover",
+          "ratio": 2.282580275545172
+        },
+        {
+          "theme": "pdk-moshi",
+          "role": "hoverChrome",
+          "ratio": 2.938681306239313
+        },
+        {
+          "theme": "pdk-moshi",
+          "role": "selectedChrome",
+          "ratio": 2.6799826153298603
+        },
+        {
+          "theme": "pdk-moshi",
+          "role": "menuHover",
+          "ratio": 2.6799826153298603
+        },
+        {
+          "theme": "pdk-moshi-forest",
+          "role": "hoverChrome",
+          "ratio": 2.9290739438454634
+        },
+        {
+          "theme": "pdk-moshi-forest",
+          "role": "selectedChrome",
+          "ratio": 2.5990050470149884
+        },
+        {
+          "theme": "pdk-moshi-forest",
+          "role": "menuHover",
+          "ratio": 2.5990050470149884
+        }
+      ]
+    },
+    "pi": {
+      "brand": "#6a9fcc",
+      "color": "#5390c4",
+      "lightnessStep": -5.93,
+      "ratios": {
+        "paper": {
+          "chrome": 3.015316122527605,
+          "popover": 3.4122993716935324,
+          "hoverChrome": 2.728626479758589,
+          "selectedChrome": 2.579667796034428,
+          "menuHover": 2.914666632733178
+        },
+        "graphite": {
+          "chrome": 5.53280382024337,
+          "popover": 4.384106658026885,
+          "hoverChrome": 4.884631105571831,
+          "selectedChrome": 4.422148786644903,
+          "menuHover": 3.3288410156607866
+        },
+        "pdk-t3-light": {
+          "chrome": 3.326001639418293,
+          "popover": 3.4122993716935324,
+          "hoverChrome": 3.1044461429631096,
+          "selectedChrome": 2.866112236818895,
+          "menuHover": 2.866112236818895
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.1542079731350325,
+          "popover": 5.533823064071687,
+          "hoverChrome": 5.398862779401561,
+          "selectedChrome": 4.994305884472408,
+          "menuHover": 4.994305884472408
+        },
+        "pdk-moshi": {
+          "chrome": 5.401568309755508,
+          "popover": 4.789612652066393,
+          "hoverChrome": 4.285677471662464,
+          "selectedChrome": 3.9083996943052326,
+          "menuHover": 3.9083996943052326
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.470031442479569,
+          "popover": 4.632757988937555,
+          "hoverChrome": 4.27166640605763,
+          "selectedChrome": 3.790304635987673,
+          "menuHover": 3.790304635987673
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.728626479758589
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.579667796034428
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.914666632733178
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.866112236818895
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.866112236818895
+        }
+      ]
+    },
+    "grok": {
+      "brand": "#60b7ef",
+      "color": "#1791e1",
+      "lightnessStep": -17.22,
+      "ratios": {
+        "paper": {
+          "chrome": 3.005727890754538,
+          "popover": 3.401448795526592,
+          "hoverChrome": 2.719949876030512,
+          "selectedChrome": 2.5714648575295382,
+          "menuHover": 2.905398450532618
+        },
+        "graphite": {
+          "chrome": 5.550453390434532,
+          "popover": 4.398091899633188,
+          "hoverChrome": 4.9002130134718165,
+          "selectedChrome": 4.4362553821327255,
+          "menuHover": 3.3394599739810076
+        },
+        "pdk-t3-light": {
+          "chrome": 3.315425476488613,
+          "popover": 3.401448795526592,
+          "hoverChrome": 3.094574491721188,
+          "selectedChrome": 2.856998449972822,
+          "menuHover": 2.856998449972822
+        },
+        "pdk-t3-dark": {
+          "chrome": 6.173839814263294,
+          "popover": 5.551475885637029,
+          "hoverChrome": 5.416085079463758,
+          "selectedChrome": 5.010237653450302,
+          "menuHover": 5.010237653450302
+        },
+        "pdk-moshi": {
+          "chrome": 5.41879924042335,
+          "popover": 4.804891452370468,
+          "hoverChrome": 4.299348725480653,
+          "selectedChrome": 3.9208674370593433,
+          "menuHover": 3.9208674370593433
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.487480769625178,
+          "popover": 4.647536424964015,
+          "hoverChrome": 4.285292964763922,
+          "selectedChrome": 3.802395657085148,
+          "menuHover": 3.802395657085148
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.719949876030512
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.5714648575295382
+        },
+        {
+          "theme": "paper",
+          "role": "menuHover",
+          "ratio": 2.905398450532618
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "selectedChrome",
+          "ratio": 2.856998449972822
+        },
+        {
+          "theme": "pdk-t3-light",
+          "role": "menuHover",
+          "ratio": 2.856998449972822
+        }
+      ]
+    },
+    "kimi": {
+      "brand": "#1783ff",
+      "color": "#1783ff",
+      "lightnessStep": 0,
+      "ratios": {
+        "paper": {
+          "chrome": 3.240272323306711,
+          "popover": 3.666872315751434,
+          "hoverChrome": 2.9321943384138933,
+          "selectedChrome": 2.772122664143469,
+          "menuHover": 3.1321139270114524
+        },
+        "graphite": {
+          "chrome": 5.148688411761926,
+          "popover": 4.079739654517235,
+          "hoverChrome": 4.545515146763922,
+          "selectedChrome": 4.115140704895655,
+          "menuHover": 3.097735925358835
+        },
+        "pdk-t3-light": {
+          "chrome": 3.574136382902977,
+          "popover": 3.666872315751434,
+          "hoverChrome": 3.336051845803621,
+          "selectedChrome": 3.079937153876288,
+          "menuHover": 3.079937153876288
+        },
+        "pdk-t3-dark": {
+          "chrome": 5.726951524816477,
+          "popover": 5.149636894494752,
+          "hoverChrome": 5.02404623986377,
+          "selectedChrome": 4.6475757441633645,
+          "menuHover": 4.6475757441633645
+        },
+        "pdk-moshi": {
+          "chrome": 5.0265639385268,
+          "popover": 4.45709335803593,
+          "hoverChrome": 3.988143923369234,
+          "selectedChrome": 3.637058690022025,
+          "menuHover": 3.637058690022025
+        },
+        "pdk-moshi-forest": {
+          "chrome": 5.090274012034121,
+          "popover": 4.311128344162233,
+          "hoverChrome": 3.9751055772684554,
+          "selectedChrome": 3.527162391870029,
+          "menuHover": 3.527162391870029
+        }
+      },
+      "exceptions": [
+        {
+          "theme": "paper",
+          "role": "hoverChrome",
+          "ratio": 2.9321943384138933
+        },
+        {
+          "theme": "paper",
+          "role": "selectedChrome",
+          "ratio": 2.772122664143469
+        }
+      ]
+    }
+  }
+}

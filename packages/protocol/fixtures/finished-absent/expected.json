@@ -1,0 +1,44 @@
+{
+  "description": "A finished terminal is absent from the next snapshot (Core pruned or removed it while Tremor was away): it leaves the store with one gap, as a `removed` event would have. The unchanged terminal adds nothing.",
+  "digest": {
+    "sources": {
+      "local": {
+        "connection": "live",
+        "coreId": "f6000000000000000000000000000006",
+        "conn": "e2",
+        "lastSeq": 7
+      }
+    },
+    "terminals": {
+      "f6000000000000000000000000000006/t1": {
+        "state": "live",
+        "status": {
+          "state": "idle"
+        },
+        "statusMs": 1794349999990,
+        "records": {},
+        "foreground": null,
+        "turn": 1,
+        "title": "",
+        "parentKey": null,
+        "gone": false,
+        "labels": {
+          "tremor.test": "f6"
+        }
+      }
+    },
+    "activity": [
+      "observation gap:f6000000000000000000000000000006:e2:7:t2:removed 1794350001520 gap:f6000000000000000000000000000006/t2>:while disconnected: no longer in Core's records"
+    ],
+    "messages": [],
+    "approvals": {},
+    "actions": {},
+    "cursors": {},
+    "docs": {
+      "local": {
+        "herdr-app": 2
+      }
+    },
+    "historyGapAt": null
+  }
+}
